@@ -1,0 +1,41 @@
+.keys{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+}
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.numbers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+}
+.specials {
+    display: flex;
+    gap: 0;
+}
+.display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 200px;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    font-size: 30px;
+}
+.key {
+    background-color: blue;
+    height: 50px;
+    width: 50px;
+    margin: 0;
+    border: 1px solid;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
