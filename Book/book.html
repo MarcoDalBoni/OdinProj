@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="book.js" defer></script>
+        <title>Book Class</title>
+        <link rel="stylesheet" href="book.css">
+    </head>
+    <body>
+
+        <div id="table-container">
+            <table id="library-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Pages</th>
+                        <th>Read</th>
+                        <th>Delete</th>
+                        <th>Sign as read</th>
+                    </tr>
+                </thead>
+                <tbody id="table-content">
+                </tbody>
+            </table>
+        </div>
+        <button class="action" id="newBookButton">New book</button>
+
+        <dialog id="newBookDialog" class="add-dialog">
+            <form action="dialog">
+                <div class="form-row">
+                    <div>
+                        <label for="title">Title:</label>
+                        <input type="text" id="title">
+                    </div>
+                    <div>
+                        <label for="author">Author:</label>
+                        <input type="text" id="author">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div>
+                        <label for="pages">Pages:</label>
+                        <input type="number" id="pages">
+                    </div>
+                    <div>
+                        <input type="checkbox" id="read" value="yes" class="check">
+                        <label for="read">Read</label>
+                    </div>
+                </div>
+                <div class="form-buttons">
+                    <button class="action" formmethod="dialog">Cancel</button>
+                    <button class="action" id="confirmDialog">Confirm</button>
+                </div>
+            </form>
+        </dialog>
+    </body>
+</html>
