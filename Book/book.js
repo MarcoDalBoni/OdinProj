@@ -1,9 +1,29 @@
-function Book(title, author, pages, read) {
-    
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
+class Book {
+
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
+
+    set title(value) { this._title = value; }
+
+    get title() { return this._title; }
+
+    set author(value) { this._author = value; }
+
+    get author() { return this._author; }
+
+    set pages(value) { this._pages = value; }
+
+    get pages() { return this._pages; }
+
+    set read(value) { this._read = value; }
+
+    get read() { return this._read; }
+
+    signAsRead = () => { this.read = true; }
 }
 
 let myLibrary = [
@@ -26,7 +46,7 @@ confirmDialog.addEventListener('click', (event) => {
     title = newBookDialog.querySelector('#title').value;
     author = newBookDialog.querySelector('#author').value;
     pages = newBookDialog.querySelector('#pages').value;
-    read = newBookDialog.querySelector('#read').value === 'yes';
+    read = newBookDialog.querySelector('#read').checked;
 
     if(title && author && pages) {
         let newBook = new Book(title, author, pages, read);
@@ -95,7 +115,8 @@ function loadLibrary() {
         signAsReadBtn.appendChild(checkImg);
         signAsReadBtn.classList.add('action-img');
         signAsReadBtn.addEventListener('click', () => {
-            signBookAsRead(book.title);
+            book.signAsRead();
+            loadLibrary();
         });
         tdBtn2.appendChild(signAsReadBtn);
 
