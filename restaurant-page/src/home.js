@@ -6,17 +6,19 @@ const home = () => {
     console.log('Richiamata home');
 
     const content = document.getElementById('content');
+    content.classList = null;
     
     while(content.firstChild) {
         content.removeChild(content.firstChild);
     }
 
     const home = document.createElement('div');
-    home.classList.add('content');
+    home.classList.add('home-div');
     
     const banner = document.createElement('img');
     banner.id = "banner";
     banner.src = Icon;
+    banner.alt = "Banner";
     home.appendChild(banner);
 
     const div = document.createElement('div');
@@ -33,7 +35,6 @@ const home = () => {
     div.appendChild(paragraph);
 
     home.appendChild(div);
-
     content.appendChild(home)
 }
 

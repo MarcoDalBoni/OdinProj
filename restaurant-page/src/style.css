@@ -3,6 +3,23 @@ body{
     flex-direction: column;
     margin: 0px;
     padding: 0px;
+    background-color: rgb(166, 53, 53);
+}
+
+.content {
+    display: flex;
+} 
+
+.space-div {
+  width: 50vw;
+  flex: 1 1 auto;
+}
+
+.content .menu {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    background-color: burlywood;
 }
 
 .header {
@@ -23,7 +40,7 @@ body{
     cursor: pointer;
 }
 
-.content {
+.home-div {
     display: flex;
     justify-content: space-between;
     background-color: burlywood;
